@@ -1,0 +1,91 @@
+{
+  "name": "jwt-google-flask-react",
+  "version": "1.0.0",
+  "private": true,
+  "repository": "",
+  "author": "Vicens Fayos <datracka@gmail.com>",
+  "license": "MIT",
+  "sideEffects": false,
+  "scripts": {
+    "bundle-report": "npx webpack-bundle-analyzer --port 4200 stats.json",
+    "watch": "webpack --mode development --progress --watch",
+    "build:dev": "NODE_ENV=development webpack --mode development",
+    "build:prod": "NODE_ENV=production webpack --mode production",
+    "serve": "export FLASK_ENV=development && flask run --cert=cert.pem --key=key.pem",
+    "dev": "webpack-dev-server --inline --color --compress",
+    "flow": "flow",
+    "test": "jest",
+    "lint:fix": "npx eslint ./client --fix"
+  },
+  "engines": {
+    "node": "12.4.0",
+    "npm": "6.9.0",
+    "yarn": "1.17.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-export-default-from": "^7.5.2",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.6.3",
+    "@testing-library/dom": "^6.8.1",
+    "@testing-library/react": "^9.3.0",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.1.0",
+    "dotenv-webpack": "^1.7.0",
+    "eslint": "5.16.0",
+    "eslint-config-airbnb": "17.1.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-import-resolver-babel-module": "^5.1.0",
+    "eslint-loader": "^3.0.2",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.1.2",
+    "history": "^4.10.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
+    "jest-transform-graphql": "^2.1.0",
+    "prettier": "^1.18.2",
+    "react-test-renderer": "^16.10.2",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.1",
+    "webpack-bundle-analyzer": "^3.5.2",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.2"
+  },
+  "dependencies": {
+    "@apollo/react-hooks": "^3.1.3",
+    "apollo-cache-inmemory": "^1.6.3",
+    "apollo-client": "^2.6.4",
+    "apollo-link": "^1.2.13",
+    "apollo-link-context": "^1.0.19",
+    "apollo-link-error": "^1.1.12",
+    "apollo-link-http": "^1.5.16",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "clsx": "^1.0.4",
+    "flow-bin": "^0.109.0",
+    "graphql": "^14.5.8",
+    "graphql-tag": "^2.10.1",
+    "isomorphic-unfetch": "^3.0.0",
+    "jwt-decode": "^2.2.0",
+    "react": "16.10.2",
+    "react-dom": "16.10.2",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
+    "use-react-router": "^1.0.7"
+  },
+  "jest": {
+    "transform": {
+      "\\.(gql|graphql)$": "jest-transform-graphql",
+      ".*": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
+  }
+}

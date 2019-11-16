@@ -1,0 +1,28 @@
+// inspiration:
+// https://www.robinwieruch.de/webpack-eslint/
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es6": true,
+    "worker": true,
+    "jest": true,
+    "node": true
+  },
+  "parser": "babel-eslint",
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "quotes": ["error", "double"],
+    "react/prop-types": 0,
+    "react/jsx-one-expression-per-line": [false],
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".js", ".jsx"] }
+    ]
+  },
+  "settings": {
+    "import/resolver": "babel-module"
+  }
+}

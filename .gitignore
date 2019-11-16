@@ -1,0 +1,17 @@
+.vscode
+node_modules
+.DS_Store
+.idea
+.env
+__pycache__
+**/__pycache__/
+server/static/main.js
+server/static/vendors~main.js
+
+stats.json
+server/static/main.js.map
+server/static/vendors~main.js.map
+credentials.json
+cert.pem
+key.pem
+migrations

@@ -1,0 +1,3 @@
+query protectedRequest($value: String!) {
+  protectedRequest(argument: $value)
+}
